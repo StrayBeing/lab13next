@@ -1,0 +1,102 @@
+.header {
+    display: flex;
+    flex-wrap: wrap; /* Dodane: lepsze dopasowanie na mniejszych ekranach */
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 3rem;
+    margin: auto;
+    max-width: 80rem;
+}
+
+.image {
+    position: relative;
+    width: 100%;
+    max-width: 30rem; /* Dodane: responsywność */
+    height: auto;
+}
+
+.header img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px; /* Zwiększone zaokrąglenie */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Mocniejszy cień */
+    animation: fade-slide-in-from-left 1s ease-out forwards;
+}
+
+.headerText {
+    padding: 1rem;
+    color: #ddd6cb;
+    max-width: 40rem;
+    text-align: center; /* Wyśrodkowanie tekstu */
+    animation: fade-slide-in-from-right 1s ease-out forwards;
+}
+
+.headerText h1 {
+    margin: 0;
+    font-size: 3rem; /* Zmniejszenie, by lepiej wyglądało */
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.creator {
+    font-size: 1.4rem;
+    color: #cfa69b;
+    font-style: italic;
+}
+
+.creator a {
+    background: linear-gradient(90deg, #f9572a, #ff8a05);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.creator a:hover,
+.creator a:active {
+    text-shadow: 0 0 18px rgba(248, 190, 42, 0.8);
+}
+
+.summary {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+
+.instructions {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    background-color: rgba(0, 0, 0, 0.7); /* Przezroczyste tło */
+    color: #fff; /* Biały tekst dla lepszego kontrastu */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    max-width: 60rem;
+    margin: 2rem auto;
+    animation: fade-slide-in-from-bottom 1s ease-out forwards;
+}
+
+.loading {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #ddd6cb;
+    font-weight: bold;
+    animation: flash 1s ease-in-out infinite alternate;
+}
+
+/* Dodana responsywność */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .headerText h1 {
+        font-size: 2.5rem;
+    }
+
+    .instructions {
+        padding: 1.5rem;
+    }
+}
